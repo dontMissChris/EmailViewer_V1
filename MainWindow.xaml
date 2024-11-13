@@ -1,0 +1,19 @@
+﻿<Window x:Class="EmailPortal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Email Portal" Height="450" Width="800">
+    <StackPanel>
+        <!-- Horizontale StackPanel für Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Unbearbeitet" Width="100" Margin="5" Click="SortByUnprocessed"/>
+            <Button Content="Bearbeitet" Width="100" Margin="5" Click="SortByProcessed"/>
+            <Button Content="In Bearbeitung" Width="100" Margin="5" Click="SortByInProgress"/>
+        </StackPanel>
+
+        <!-- ListBox zur Anzeige der E-Mails -->
+        <ListBox x:Name="emailListBox" Width="700" Height="300" Margin="10">
+            <!-- Keine ItemTemplate erforderlich, da wir das Layout direkt in C# erstellen -->
+        </ListBox>
+
+    </StackPanel>
+</Window>
